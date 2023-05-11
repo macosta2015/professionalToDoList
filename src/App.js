@@ -10,7 +10,7 @@ const App = () => {
             <header>
                 <h1>Ed's to do list</h1>
             </header>
-            <Counter />
+            {/* <Counter /> */}
         </div>
     );
 };
