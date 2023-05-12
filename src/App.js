@@ -9,11 +9,12 @@ import Counter from "./components/Counter.js";
 const App = () => {
 
     const[inputText, setInputText] = useState ("");
+    const [todos,setTodos] = useState([]);
 
     return (
         <div className="App">
             <header>
-                <h1>Ed's to do list {inputText}</h1>
+                <h1>Ed's to do list</h1>
             </header>
             <Form setInputText={setInputText}/>
             <ToDoList/>

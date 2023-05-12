@@ -5,6 +5,8 @@ const Form =  ({setInputText}) => {
     const inputHandler = (e) =>{
         console.log("Inside inputHandler")
         console.log(e.target.value)
+        // When the onChange is activated, we then start using inputHandlder
+        //This then changes the value of setInputText to "e.target.value"
         setInputText(e.target.value)
     }
 
