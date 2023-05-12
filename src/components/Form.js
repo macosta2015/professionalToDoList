@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form =  ({setInputText}) => {
+const Form =  ({setInputText, todos, setTodos, inputText}) => {
 
     const inputHandler = (e) =>{
         console.log("Inside inputHandler")
