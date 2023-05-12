@@ -10,6 +10,7 @@ const Form =  ({setInputText, todos, setTodos, inputText}) => {
         setInputText(e.target.value)
     };
 
+    //This arrow function will add all the Todos on a single list
     const submitTodoHandler = (e) =>{
         e.preventDefault();
         setTodos([

@@ -17,12 +17,12 @@ const App = () => {
                 <h1>Ed's to do list</h1>
             </header>
             <Form 
-            inputText={inputText}
-            todos={todos} 
-            setTodos={setTodos} 
-            setInputText={setInputText}
+                inputText={inputText}
+                todos={todos} 
+                setTodos={setTodos} 
+                setInputText={setInputText}
             />
-            <ToDoList/>
+            <ToDoList todos={todos}/>
             {/* <Counter /> */}
         </div>
     );
