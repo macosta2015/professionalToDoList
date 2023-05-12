@@ -11,9 +11,9 @@ const App = () => {
     const[inputText, setInputText] = useState ("");
 
     return (
-        <div>
+        <div className="App">
             <header>
-                <h1>Ed's to do list</h1>
+                <h1>Ed's to do list {inputText}</h1>
             </header>
             <Form setInputText={setInputText}/>
             <ToDoList/>
