@@ -8,12 +8,20 @@ const Form =  ({setInputText}) => {
         // When the onChange is activated, we then start using inputHandlder
         //This then changes the value of setInputText to "e.target.value"
         setInputText(e.target.value)
-    }
+    };
+
+    const submitTodoHandler = (e) =>{
+        e.preventDefault();
+        setTodos([
+            ...ToDoList, 
+            {text: inputText, completed: false, id:Math.random() *1000}
+        ]);
+    };
 
     return (
         <form>
             <input onChange={inputHandler} type="text" className="todo-input" />
-            <button className="todo-button" type="submit">
+            <button onClick={submitTodoHandler} className="todo-button" type="submit">
                 <i className="fas fa-plus-square"></i>
             </button>
             <div className="select">
