@@ -2,8 +2,8 @@ import react from "react";
 
 const Todo = () => {
     return (  
-        div.Todo
-        
+        console.log("Hello World")
+
     );
 }
  export default Todo;
