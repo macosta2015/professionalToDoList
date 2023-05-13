@@ -20,7 +20,23 @@ const App = () => {
     //Use effect, anytime [todos] or [status] changes, run the function
     useEffect(() => {
         filterHandler();
+        saveLocalTodos();
     }, [todos, status]);
+
+    //Functions
+    const filterHandler = () => {
+        switch (status) {
+            case "completed":
+                setFilteredTodos(todos.filter((todo) => todo.completed === true));
+                break;
+            case "uncompleted":
+                setFilteredTodos(todos.filter((todo) => todo.completed === false));
+                break;
+            default:
+                setFilteredTodos(todos)
+                break;
+        }
+    };
 
     //Save to local
     const saveLocalTodos = () => {
@@ -32,15 +48,11 @@ const App = () => {
         if (localStorage.getItem("todos") === null) {
             localStorage.setItem("todos", JSON.stringify([]));
         } else {
+            // let todoLocal = localStorage.getItem("todos", JSON.stringify(todos))
             let todoLocal = JSON.parse(localStorage.getItem("todos"));
-            setTodos(todoLocal)
+            // setTodos(todoLocal)
         }
     };
-
-    //Call the saveLocalTodos function when todos changes
-    useEffect(() => {
-        saveLocalTodos();
-    }, [todos]);
 
     return (
         <div className="App">
