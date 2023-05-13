@@ -4,8 +4,6 @@ import Form from "./components/Form";
 import ToDoList from "./components/ToDoList.js";
 import Counter from "./components/Counter.js";
 
-
-
 const App = () => {
 
     //State stuff
@@ -23,10 +21,10 @@ const App = () => {
     const filterHandler = () => {
         switch (status) {
             case "completed":
-                setFilteredTodos(todos.filter((todo) => todos.completed === true));
+                setFilteredTodos(todos.filter((todo) => todo.completed === true));
                 break;
             case "uncompleted":
-                setFilteredTodos(todos.filter((todo) => todos.completed === false));
+                setFilteredTodos(todos.filter((todo) => todo.completed === false));
                 break;
             default:
                 setFilteredTodos(todos)
