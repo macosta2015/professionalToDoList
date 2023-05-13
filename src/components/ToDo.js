@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Todo = ({ text, todos, setTodos }) => {
+const Todo = ({ text, todo, todos, setTodos }) => {
     //Events 
     const deleteHandler = () => {
-        setTodos(todos.filter((el) => el.id !== todos.id));
-        console.log("DELETE")
+        // setTodos(todos.filter((el) => el.id !== todo.id));
+        console.log(todo)
     };
     return (
         <div className="todo">
