@@ -1,22 +1,22 @@
 import React from 'react';
 
-const Todo = ({text}) => {
-    return (  
+const Todo = ({ text, todos, setTodos }) => {
+    return (
         <div className="todo">
             <li className="todo-item">
-            {text}
-            </li>    
+                {text}
+            </li>
             <button className="complete-btn">
                 <i className="fas fa-check">
 
                 </i>
             </button>
             <button className="trash-btn">
-            <i className="fas fa-trash">                    
+                <i className="fas fa-trash">
 
-            </i>
-            </button>   
+                </i>
+            </button>
         </div>
     );
 }
- export default Todo;
+export default Todo;

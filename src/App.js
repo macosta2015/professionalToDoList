@@ -8,21 +8,21 @@ import Counter from "./components/Counter.js";
 
 const App = () => {
 
-    const[inputText, setInputText] = useState ("");
-    const [todos,setTodos] = useState([]);
+    const [inputText, setInputText] = useState("");
+    const [todos, setTodos] = useState([]);
 
     return (
         <div className="App">
             <header>
                 <h1>Ed's to do list</h1>
             </header>
-            <Form 
+            <Form
                 inputText={inputText}
-                todos={todos} 
-                setTodos={setTodos} 
+                todos={todos}
+                setTodos={setTodos}
                 setInputText={setInputText}
             />
-            <ToDoList todos={todos}/>
+            <ToDoList setTodos={setTodos} todos={todos} />
             {/* <Counter /> */}
         </div>
     );
