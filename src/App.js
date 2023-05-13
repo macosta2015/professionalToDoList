@@ -20,13 +20,8 @@ const App = () => {
     //Use effect, anytime [todos] or [status] changes, run the function
     useEffect(() => {
         filterHandler();
-    }, [todos, status]);
-
-    //Test
-    useEffect(() => {
         saveLocalTodos();
-    }, [todos]);
-
+    }, [todos, status]);
 
     //Functions
     const filterHandler = () => {
