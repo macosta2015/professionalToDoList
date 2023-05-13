@@ -1,10 +1,8 @@
 import React from 'react';
 
-const Form = ({ setInputText, todos, setTodos, inputText }) => {
+const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
 
     const inputHandler = (e) => {
-        console.log("Inside inputHandler")
-        console.log(e.target.value)
         // When the onChange is activated, we then start using inputHandlder
         //This then changes the value of setInputText to "e.target.value"
         setInputText(e.target.value)
@@ -20,7 +18,7 @@ const Form = ({ setInputText, todos, setTodos, inputText }) => {
         setInputText("");
     };
     const statusHandler = (e) => {
-        console.log(e.target.value);
+        setStatus(e.target.value);
     }
 
     return (
