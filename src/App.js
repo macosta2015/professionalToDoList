@@ -50,7 +50,7 @@ const App = () => {
         } else {
             // let todoLocal = localStorage.getItem("todos", JSON.stringify(todos))
             let todoLocal = JSON.parse(localStorage.getItem("todos"));
-            setTodos(todoLocal)
+            // setTodos(todoLocal)
         }
     };
 
